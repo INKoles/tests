@@ -1,11 +1,8 @@
-from src.task_10_2 import divide, calculate_logarithm
+from src.task_10_2 import divide, calculate_logarithm, revers_string
 import pytest
 
 def test_divide():
     assert divide(2, 1) == 2
-
-
-def test_zero_divide():
 
     assert divide(2, 0) == 0
 
@@ -16,4 +13,14 @@ def test_calc_log():
 
     with pytest.raises(ValueError):
         calculate_logarithm(0, 2)
+
+    with pytest.raises(ValueError):
         calculate_logarithm(8, 0)
+
+
+def test_reverse_string_number(numbers):
+    assert revers_string('123') == numbers
+
+
+def test_reverse_string_letter(letters):
+    assert revers_string('hello') == letters

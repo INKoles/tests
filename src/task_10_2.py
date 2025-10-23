@@ -1,15 +1,11 @@
 import math
 
-def add_numbers(a, b):
-    return a + b
-
-
-def is_even(a):
-    return a % 2 == 0
-
-
-def find_max(my_list):
-    return max(my_list)
+# if __name__ == "10_2_task":
+#     assert add_numbers(2, 2) == 4, "add success"
+#
+#     assert is_even(2) == True
+#
+#     assert find_max([1, 2, 3, 4, 5]) == 5
 
 
 def divide(a, b):
@@ -18,13 +14,9 @@ def divide(a, b):
     return 0
 
 
-if __name__ == "10_2_task":
-    assert add_numbers(2, 2) == 4, "add success"
-
-    assert is_even(2) == True
-
-    assert find_max([1, 2, 3, 4, 5]) == 5
+def calculate_logarithm(x, base):
+    return math.log(x, base)
 
 
-def calculate_logarithm(x,base):
-    return math.log(x,base)
+def revers_string(my_string):
+    return my_string[::-1]
