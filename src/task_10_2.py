@@ -1,3 +1,5 @@
+import math
+
 def add_numbers(a, b):
     return a + b
 
@@ -22,3 +24,7 @@ if __name__ == "10_2_task":
     assert is_even(2) == True
 
     assert find_max([1, 2, 3, 4, 5]) == 5
+
+
+def calculate_logarithm(x,base):
+    return math.log(x,base)
