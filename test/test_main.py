@@ -1,4 +1,4 @@
-from src.task_10_2 import divide, calculate_logarithm, revers_string
+from src.task_10_2 import divide, calculate_logarithm, reverse_string
 import pytest
 
 def test_divide():
@@ -18,9 +18,17 @@ def test_calc_log():
         calculate_logarithm(8, 0)
 
 
-def test_reverse_string_number(numbers):
-    assert revers_string('123') == numbers
+# def test_reverse_string_number(numbers):
+#     assert revers_string('123') == numbers
+#
+#
+# def test_reverse_string_letter(letters):
+#     assert reverse_string('hello') == letters
 
-
-def test_reverse_string_letter(letters):
-    assert revers_string('hello') == letters
+@pytest.mark.parametrize('value, expected', [
+    ('123', '321'),
+    ('hello', 'olleh'),
+    ('world', 'dlrow')
+])
+def test_reverse_string(value, expected):
+    assert reverse_string(value) == expected
