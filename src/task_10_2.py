@@ -20,3 +20,19 @@ def calculate_logarithm(x, base):
 
 def reverse_string(my_string):
     return my_string[::-1]
+
+def calc_avg(my_list):
+    return sum(my_list) / len(my_list)
+
+if __name__ == 'task_10_2':
+    assert calc_avg([1, 2, 3, 4]) == 2.5
+
+
+# пишем ф-ю finder методом TDD
+def finder(my_list,  my_type):
+    counter = 0
+    if isinstance(my_list, list):
+        for item in my_list:
+            if isinstance(item, my_type):
+                counter += 1
+    return counter

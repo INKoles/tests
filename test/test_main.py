@@ -1,4 +1,4 @@
-from src.task_10_2 import divide, calculate_logarithm, reverse_string
+from src.task_10_2 import divide, calculate_logarithm, reverse_string, finder
 import pytest
 
 def test_divide():
@@ -32,3 +32,21 @@ def test_calc_log():
 ])
 def test_reverse_string(value, expected):
     assert reverse_string(value) == expected
+
+
+# пишем ф-ю finder методом TDD
+def test_finder_basic():
+    assert finder([1, '2', [], {}, ('3',)], int) == 1
+    assert finder([1, '2', [], {}, ('3',), 3], int) == 2
+
+
+def test_finder_zero():
+    assert finder([1, 2, [], {}, ('3',), 3], str) == 0
+
+
+def test_finder_empty():
+    assert finder([], str) == 0
+
+
+def test_finder_not_list():
+    assert finder(123, int) == 0
